@@ -1,1 +1,7 @@
 Answer written questions here:
+
+1. Starting low means each frame finishes faster after you move the view, so the app stays responsive. If we always used a high maxIters, every pixel would take longer and the UI would feel laggy.
+
+2. Split the pixels across multiple threads or machines: one machine hands out chunks of the image, the others compute them in parallel, then the results get put back together.
+
+3. Averaging 4 subpixels would look smoother with less noise and fewer jaggies, but it would take about 4 times longer since you run mandelbrot four times per pixel.
